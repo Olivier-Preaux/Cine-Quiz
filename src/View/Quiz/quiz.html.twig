@@ -1,0 +1,20 @@
+{% extends 'layout.html.twig' %}
+
+
+
+{% block content %}
+
+<div class='quizbody'>
+    <h1 class="quizh1">Choisis ton QUESTIONNAIRE et installe toi !</h1>
+    <div class='quizlist'>
+        {% for quiz in quizs %}
+        <div class="quiz-child"> {# A revoir #}
+            <form action="/play" method="post">
+                <button type="submit" id="{{quiz.name}}" name="quiz" value="{{quiz.id}}">{{quiz.name}}</button>
+                <label for="{{quiz.name}}"></label>
+            </form>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

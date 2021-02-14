@@ -1,0 +1,600 @@
+html, body {
+    margin:0;
+    padding:0;
+    }
+
+/************************** */
+/* *****PAGE INDEX CSS****  */
+/************************** */
+
+nav
+{
+    background-color:#b19c4a ;
+    display:flex ;
+    align-items: center ;
+    justify-content: space-between;
+    padding-right: 20px;    
+}
+
+.boutonaccueil div {
+    background-color: rgb(0,0,0,0.3);
+}
+
+.logotitre
+{   
+    font-family: Impact, sans-serif;
+    display:flex ;
+    align-items: center ;
+}
+
+.logo img
+{
+    padding-left : 5px ;
+    padding-right: 5px ;;
+    height: 100px ;
+    
+}
+
+.pellicule {
+    margin-bottom: 5px;
+}
+
+.partenaire 
+{
+    text-align: center;
+    
+}
+
+.partenaire img
+{
+    border-color: white;
+    border-style: solid;
+}
+
+nav .titre 
+{
+    font-size: 5vw ;
+}
+
+.slogan
+{
+    margin-bottom: 60px ;
+    margin-top : 40px;
+    text-align: center;
+    font-size: 2.5vw ;
+    color : white ;  
+    font-family: arial , sans-serif;
+    background-color: black ;   
+}
+
+.container {   
+    
+    height : calc(101vh - 124px);
+    background-image: url("../images/background.jpg");
+    display :flex ;
+    flex-direction: column ;
+}
+
+
+.accueil  {
+    display : flex ;
+    
+} 
+
+.texteaccueil {
+    display : flex ;
+    flex-direction: column ;
+    justify-content: space-around  ;
+    align-items: center ;
+    width : 70%;
+    height : 600px ;
+}
+
+.texteaccueil .text {
+    font-family: Impact, sans-serif;
+    margin-bottom: 20px ;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+.boutonaccueil {
+    display : flex ;
+    flex-direction: column ;
+    justify-content: space-around  ;
+    height : 600px ;
+}
+
+.boutonaccueil img  {
+    display: flex ;
+    justify-content: space-between;
+    height : 150px ;
+    width : auto ;
+}
+
+/* .boutonaccueil .imagecreer {
+    margin-top: 50px ;
+} */
+
+
+.texteaccueil {
+    color : #B19C4A ;    
+    font-size : 4vw ; 
+}
+
+.texteaccueil strong {
+    color : #B19C4A  ;    
+    font-size : 4vw ; 
+}
+
+
+
+
+
+
+/************************* */
+/* *****PAGE READ CSS****  */
+/************************* */
+
+.pageQuiz
+{
+    height : calc(100vh - 124px);
+    width: auto ;
+    padding-top : 20px ;
+    background-image: url("../images/fond.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.containerAnswer {
+    background-color: black;
+    height : 85% ;
+    width: auto ;
+    margin-left: 15% ;
+    margin-right: 15% ;
+    border-color: white ;
+    border-style: solid;
+}
+
+.question {
+    margin-left: 20px ;
+    color: white ;
+    font-size: 25px ;
+}
+
+.affichage{
+    display : flex ;
+}
+
+.affiche {
+    display: flex;
+	justify-content: space-around ;
+    align-items: center;    
+    width : 50% ;
+    padding-bottom: 40px ;
+}
+
+.affiche img {
+    height : 320px ;
+    width : auto ;
+}
+
+.answer {
+    height : 100% ;
+    display : flex ;
+    flex-direction: column;   
+    font-size: 30px ;
+    color :  #c7a931;
+}
+
+.butrep {
+    display: flex;
+    align-items: center; 
+    padding-bottom: 30px ; 
+}
+
+.butrep button {
+    background-color : yellow ;
+    font-size: 35px ;
+    margin-right:20px ;
+    height :60px;
+    width: 60px ;
+    border-radius: 10px;   
+}
+
+.butrep button:hover {
+	background-color:#e9b340;
+}
+
+.butrep button:active {
+	position:relative;
+	top:1px;
+}
+
+
+button a {
+    text-decoration:none;
+}
+
+
+
+/***************************************** */
+/* *****PAGE THEMES/QUESTIONNAIRS CSS****  */
+/*******************************************/
+
+
+
+.themesbody, .quizbody {
+    height : calc(103vh - 124px);
+    background-image: url("../images/background.jpg");
+    background-size: 100% ;
+    background-position: bottom ;
+}
+
+.themesh1 , .quizh1 {
+    margin-top: 0px;
+}
+
+.themesh1 , .quizh1 {
+    text-align: center; 
+    font-size: 3vw ;
+    color : white ;  
+    font-family: arial , sans-serif;
+    background-color: black ;    
+}
+
+.themeslist button , .quizlist button {
+    padding-left : 5px ;
+    background : none ;
+    text-transform: uppercase;
+    font-size: 2vw ;
+    font-weight: bold;
+    border : none ;
+    height : 8vw ;
+    width : auto ;
+    font-family: Impact, sans-serif;    
+}
+
+.themeslist button:active , .quizlist button:active {
+	position:relative;
+	top:1px;
+}
+
+.themeslist button:hover , .quizlist button:hover {
+    color : yellow ;
+    text-shadow: -1px 0 black, 0 1px black ,
+        1px 0 black , 0 -1px black 
+}
+
+.themeslist button{
+    color: rgb(0, 0, 0);
+    text-shadow: -1px 0 white, 0 1px white ,
+        1px 0 white , 0 -1px white 
+}
+
+.quizlist button{
+    color: #B19C4A;}
+
+.themeslist  , .quizlist {
+    display: flex;
+	flex-direction: row ;
+    flex-wrap: wrap;
+	justify-content: space-around ;
+	align-items: center;
+	align-content: space-around    
+}
+
+.themeslist div , .quizlist div {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin : 10px ;
+    width : 30% ;
+    height : 14vw ;
+    text-align: center;
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.themeslist div{
+    
+    background-position-x: 8vw;
+    background-image: url("../images/popcorn.png");
+}
+
+.quizlist div{
+    background-image: url("../images/chair.png");
+}
+
+/*************************** */
+/* *****PAGE CREATE1CSS****  */
+/*************************** */
+
+
+
+.createbody , .create2body , .editbody {
+    height : calc(102.5vh - 124px);
+    background-image: url("../images/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.createbody h1 {
+    background :black ;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.createbody h1 {
+    text-align: center; 
+    font-size: 3vw ;
+    color : white ;  
+    font-family: arial , sans-serif;    
+}
+
+.edisup {
+    text-align: right ;
+    margin-right : 20px ;
+}
+
+.createbody a , .create2body a {
+    font-size: 30px;
+    color : rgb(158, 157, 157);
+    text-shadow: -1px 0 black, 0 1px black ,
+        1px 0 black , 0 -1px black 
+}
+
+.themeselect {
+    display : flex ;
+    flex-direction: column;
+    align-items: center;
+    font-size: 40px ;
+    color : #B19C4A  ;
+    
+    text-shadow: -1px 0 black, 0 1px black ,
+        1px 0 black , 0 -1px black 
+
+}
+
+.themeselect div {
+    background-color: rgb(0, 0, 0, 0.5);
+    margin-top: 80px ;
+    margin-bottom: 50px;
+}
+
+
+
+
+
+/*************************** */
+/* *****PAGE CREATE2CSS****  */
+/*************************** */
+
+.create2body {
+    display : flex ;
+    flex-direction: column;
+    font-size: 30px ;
+    color : #B19C4A  ;    
+    text-shadow: -1px 0 black, 0 1px black ,
+        1px 0 black , 0 -1px black 
+}
+
+.block1 {
+    margin-top : 30px ;
+    margin-left : 30px ;
+}
+
+.boiteradio {
+    display : flex ;
+    align-items: center ;
+}
+
+.boiteradio input[type=radio] {
+    margin-left: 20px ;
+}
+
+.blocqr {
+    display :flex 
+}
+
+.blocquestion {
+    width : 60%
+}
+
+.blocquestion input[type=text]
+{
+    width: 70%;
+    box-sizing: border-box;
+} 
+
+.blocreponses input[type=text]
+{
+    width: 50%;
+    box-sizing: border-box;
+} 
+
+
+.submitcrea {
+    margin-top: 70px ;
+    text-align: center ;
+    color : white ;
+}
+
+/*************************** */
+/* *****  EDIT   CSS   ****  */
+/*************************** */
+
+
+.edition {
+    display:flex ;
+    margin-left: 20px ;
+    font-size: 25px ;
+
+}
+
+.edition div {
+    margin-right : 20px  ;
+    margin-top: 15px ;
+}
+
+.editimage {
+    display : flex ;
+    align-items: right ;
+    
+}
+
+.editimage img {
+    height: 200px ;
+    width : 150 px ;
+
+}
+
+.editbody {
+    color : yellow ;
+    font-size: 20px ;
+}
+
+.editbodyx {
+    padding : 10px ;
+    text-align: center;
+}
+
+.editquestion {
+    padding-left: 70px ;
+    width : 70% ;
+}
+
+.editquestion input[type=text] {
+    width: 60% ;
+}
+
+.editrep {
+    display : flex ;
+    flex-direction : column ;
+    width : 50% ;
+    display : flex ;
+}
+
+.panswers {
+    display : flex ;
+}
+
+
+.editqr {
+    display : flex ;
+}
+
+/*************************** */
+/* *****  RESULT CSS   ****  */
+/*************************** */
+
+.result {
+    height : calc(97vh - 124px);
+    padding: 20px ;
+    background-image: url("../images/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.result h2{
+    font-size: 30px ;
+    color : yellow ;
+    font-family: Impact, sans-serif;
+}
+
+.ligneresult{
+    background: rgba(177, 156, 74, 0.5);
+    margin-top: 3px ;
+    color : white ;
+    font-size: 20px ;
+    display: flex ;
+}
+
+.debut {
+    width : 50% ;
+    text-shadow: -1px -1px black, 1px 1px black;
+    
+}
+
+.result p{
+    background-color: black;
+    font-family: arial , sans-serif;
+    font-size: 50px ;
+    color : rgb(250, 244, 250) ;
+    text-align: center ;
+    margin-top: 20px ;
+}
+
+.result em{
+    font: medium;
+}
+
+.result strong {
+    font-family: arial , sans-serif;
+    color :yellow ;
+}
+
+.fin {
+    color : black ;
+}
+
+
+
+
+
+
+
+
+/*************************** */
+/* *****  RESPONSIVE   ****  */
+/*************************** */
+
+
+@media only screen and (max-width: 600px) {
+    .themeslist  , .quizlist {font-size:20px}
+}
+
+@media only screen and (max-width: 700px) {
+    .boutonaccueil .text { display: none};
+}
+
+@media only screen and (max-width: 700px) {
+    .logotitre .titre {display :none}
+}
+
+@media only screen and (max-width: 700px) {
+    .jouer img , .creer img {
+        height : 150px ;
+        width : auto ;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .affiche {
+        display: none ;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .answer {
+        padding-left: 20px ;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .result em {
+        display : none ;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .debut {
+        width :70% ;
+    }
+}
+
+
+

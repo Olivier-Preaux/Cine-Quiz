@@ -1,0 +1,15 @@
+{% extends 'layout.html.twig' %}
+
+
+{% block content %}
+<div class='result'>
+ 
+<h2>C'est fini ! Voyons les bonnes RÉPONSES :</h2>
+    {% for result in results %}
+    <div class='ligneresult'>
+    <div class='debut'>{{result.nb_question}} - {{result.question}}</div><div class='fin'><em> La bonne réponse est :</em> <strong>{{result.answer}}</strong></div>
+    </div>
+    {% endfor %}
+    <p>Ton score est de : <strong>{{session.good_answer}} / {{session.nbQuestion}}</strong></p>
+</div>
+{% endblock %}

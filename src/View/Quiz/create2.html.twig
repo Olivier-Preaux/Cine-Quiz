@@ -1,0 +1,63 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+<div class='create2body'>
+<div class='edisup'>
+<a href="/quiz">=>Editer/Supprimer des QUESTIONNAIRES</a>
+    </div>
+        <div class='block1'>
+        <form action="" method="POST" enctype="multipart/form-data">
+        <label for="image">Veuillez insérer l'image</label>
+        <input type="file" id="image" name="image">
+        <div class="boiteradio">
+                <p>Type de question :</p>
+
+                <input type="radio" name="nb_answer" id="2" value="2">
+                <label for="2">2 réponses</label>
+                <input type="radio" name="nb_answer" id="4" value="4" checked>
+                <label for="4">4 réponses</label>
+
+        </div>
+
+       <div class='blocqr'>
+       <div class='blocquestion'><label for="question">Votre question</label>
+        <input type="text" id="question" name="question">
+        </div>
+        <br>
+        <div class=blocreponses>        
+        <label for="answer1">Réponse 1 :</label>
+        <input type="text" id="answer1" name="answer1">
+        <br>
+        <label for="answer2">Réponse 2 :</label>
+        <input type="text" id="answer2" name="answer2">
+        <br>
+        <label for="answer3">Réponse 3 :</label>
+        <input type="text" id="answer3" name="answer3">
+        <br>
+        <label for="answer4">Réponse 4 :</label>
+        <input type="text" id="answer4" name="answer4">
+
+        </div>
+        <div>
+        <input type="radio" name="result" id="1" value="1">
+        <label for="1"></label>
+        <br>
+        <input type="radio" name="result" id="2" value="2">
+        <label for="2"></label>
+        <br>
+        <input type="radio" name="result" id="3" value="3">
+        <label for="3"></label>
+        <br>
+        <input type="radio" name="result" id="4" value="4">
+        <label for="4"></label>
+        </div>       
+        </div>
+        <div class='submitcrea'>
+         <label for="submit" >ENVOYER</label>
+        <input type="submit" id="submit" name="submit">
+        </div>
+    </form>
+    </div>
+
+</div>
+{% endblock %}

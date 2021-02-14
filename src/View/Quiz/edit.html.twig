@@ -1,0 +1,41 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+<div class='editbody'>
+<div class='editbodyx'>
+    <div class='editimage'>
+        <img src="{{question.image}}" alt="">
+        <form action="/update?question={{question.id}}" method="POST" enctype="multipart/form-data">
+        <label for="image">Veuillez insérer l'image</label>
+        <input type="file" id="image" name="image">
+    
+    <div class="boiteradio">
+        <p>Type de question</p>
+
+        <input type="radio" name="nb_answer" id="2" value="2">
+        <label for="2">2 réponses</label>
+        <input type="radio" name="nb_answer" id="4" value="4" checked>
+        <label for="4">4 réponses</label>
+    </div></div>
+    <div class='editqr'>
+        <div class='editquestion'><label for="question">Votre question</label>
+            <input type="text" id="question" name="question" value="{{question.name}}">
+        </div>
+        <br>
+        <div class='editrep'>
+            {% for answer in answers %}
+            <div classe='panswers'>
+                <div><label for="answer{{loop.index}}">Réponse{{loop.index}}</label></div>
+                <div><input type="text" id="answer{{loop.index}}" name="answer{{loop.index}}" value="{{answer.name}}">
+                <input type="hidden" name="idAnswer{{loop.index}}" value="{{answer.id}}"></div>
+                <div><input type="radio" name="result" id="{{loop.index}}" value="{{loop.index}}"
+                    {{answer.result=='1'?'checked':''}}></div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <input type="submit">
+</form>
+</div>
+</div>
+{% endblock %}

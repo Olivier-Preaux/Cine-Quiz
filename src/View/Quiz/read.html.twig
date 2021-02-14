@@ -1,0 +1,37 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Question{% endblock %}
+{% block content %}
+<div class="pageQuiz">
+
+
+
+    <div class="containerAnswer">
+
+        <div class="question">
+            <p>{{session.id_question - 1 }} - {{ questions.name }}</p>
+        </div>
+
+        <div class=affichage>
+
+            <div class="affiche">
+            <img style="border-color:white;"  border="1" src="/assets/images/upload/{{questions.image}}">
+            </div>
+
+            <div class="answer">
+                {% set count = 1 %}
+                {% for answer in answers %}
+                <form method="post" action="/good">
+                <div class=butrep>
+                    <button type="submit" id="{{answer.name}}" name="true" value="{{answer.result}}">{{count}}</button>
+                    <label for="{{answer.name}}">{{answer.name}}</label>
+                </form>
+                </div>
+                {% set count = count + 1 %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

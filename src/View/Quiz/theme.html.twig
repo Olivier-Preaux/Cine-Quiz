@@ -1,0 +1,20 @@
+{% extends 'layout.html.twig' %}
+
+
+
+{% block content %}
+<div class='themesbody'>
+    <h1 class='themesh1'>Choisis ton THEME , prends ton pop-corn et on y va !</h1>
+    <div class='themeslist'>
+    {% for theme in themes %}    
+    <div>
+            <form method="post" action="/theme/quiz">
+            <button type="submit" id="{{theme.name}}" name="theme" value="{{theme.id}}">{{theme.name}}</button>
+            <label for="{{theme.name}}" ></label>
+        
+            </form>
+    </div>
+    {% endfor %}
+    </div>
+</div>
+{% endblock %}

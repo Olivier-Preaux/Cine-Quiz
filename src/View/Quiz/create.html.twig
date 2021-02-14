@@ -1,0 +1,30 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+
+<div class="createbody">
+    <h1>Crée ton QUIZ ! Donne lui un nom ici !</h1>
+    <div class='edisup'>
+    <a href="/quiz">=>Editer/Supprimer des QUESTIONNAIRES</a>
+    </div>
+    <form action="" method="POST" >
+        <div class='themeselect'>
+            <div><label for="theme">Sélectionne le THEME ici :</label>
+            <select name="theme" id="theme">
+                <option value="1">Films</option>
+                <option value="2">Acteurs</option>
+                <option value="3">Répliques</option>
+                <option value="4">Histoire</option>
+                <option value="5">Vrai/Faux</option>
+                <option value="6">Fourre-Tout</option>
+            </select>
+            </div>
+            <div><label for="quiz">Entre le nom du QUESTIONNAIRE là : </label>
+            <input type="text" name="quiz" id="quiz">
+            <button type="submit">Envoyer</button>
+            </div>
+        </div>
+    </form>
+    
+{% endblock %}
+

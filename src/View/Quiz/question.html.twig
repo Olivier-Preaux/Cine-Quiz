@@ -1,0 +1,19 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+<div class='editbody'>
+{% for question in questions %}
+<div class='edition'>
+<div>{{question.name}}</div>
+<div><form action="/edit?editer={{question.id_quiz}}" method="post">
+    <button type="submit" name="supprimer" value="{{question.id}}" id="{{question.name}}">supprimer</button>
+    <label for="{{question.name}}"></label>
+</form></div>
+<div><form action="/edit2?editer={{question.id_quiz}}&" method="get">
+    <button type="submit" name="edit" id="{{question.id}}" value="{{question.id}}">éditer</button>
+    <label for="{{question.id}}"></label></div>
+</form>
+</div>
+{% endfor %}
+</div>
+{% endblock %}
